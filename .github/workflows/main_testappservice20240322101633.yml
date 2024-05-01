@@ -9,6 +9,23 @@ on:
       - main
   workflow_dispatch:
 
+env:
+  AZURE_WEBAPP_NAME: WebApplication120240430032308
+  AZURE_WEBAPP_PACKAGE_PATH: WebApplication1\publish
+  AZURE_APIM_RESOURCE_PATH: /
+  AZURE_APIM_RESOURCEGROUP: testing
+  AZURE_APIM_SERVICENAME: APItestingapi
+  AZURE_APIM_API_ID: APItesting
+  AZURE_APIM_APPSERVICEURL: https://webapplication120240430032308.azurewebsites.net
+  SWASHBUCLE_ASPNET_CORE_CLI_PACKAGE_VERSION: 6.5.0
+  SWASHBUCKLE_DOTNET_CORE_VERSION: 8.0.x
+  API_IMPORT_SPECIFICATION_PATH: WebApplication1\publish\swagger.json
+  API_IMPORT_DLL: WebApplication1\WebApplication1\bin\Release\net8.0\WebApplication1.dll
+  API_IMPORT_VERSION: v1
+  CONFIGURATION: Release
+  DOTNET_CORE_VERSION: 8.0.x
+  WORKING_DIRECTORY: WebApplication1
+  
 jobs:
   build:
     runs-on: windows-latest
